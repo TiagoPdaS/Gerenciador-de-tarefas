@@ -104,6 +104,8 @@ body {
 }
 
 .btn-clear {
+  display: flex;
+   justify-content: center;
   background-color: #ef5350;
   height: 32px;
   color: #fff;

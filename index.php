@@ -70,7 +70,7 @@ if ( isset($_GET['key'])){
                 foreach ( $_SESSION['tasks'] as $key => $task) {
                     echo "<li>
                              <span>$task</span>
-                             <button type='button' class='btn-clear' onclick='deletar$key()'>Remover</button>
+                             <button type='button' class='btn-clear-2' onclick='deletar$key()'>Remover</button>
                              <script>
                                 function deletar$key(){
                                   if (confirm('Deseja remover a tarefa?')){

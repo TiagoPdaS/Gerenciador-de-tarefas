@@ -112,6 +112,17 @@ body {
   padding: 0 12px;
 }
 
+.btn-clear-2{
+  background-color: #ef5350;
+  height: 32px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0 12px;
+  float: right;
+}
+
+
 .btn-clear:hover {
   background-color: #ef8685;
 }

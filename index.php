@@ -5,8 +5,14 @@ if (!isset($_SESSION['tasks'])){
 }
 
 if (isset($_GET['task_name'])){
-    array_push($_SESSION['tasks'], $_GET['task_name']);
-    unset($_GET['task_name']);
+    if ($_GET['task_name'] != ""){
+        array_push($_SESSION['tasks'], $_GET['task_name']);
+        unset($_GET['task_name']);
+    }
+    else{
+        $_SESSION['message'] = "O campo tarefa não pode ser vazio";
+    }
+   
 }
 
 if ( isset($_GET['clear']) ){
@@ -44,6 +50,14 @@ if ( isset($_GET['key'])){
                 <input type="text" name="task_name" placeholder="Nome da tarefa">
                 <button type="submit">Cadastrar</button>
             </form>
+
+            <?php
+                if ( isset( $_SESSION['message'])){
+                    echo "<p style='color:#ef5350';>" . $_SESSION['message'] . "</p>";
+                    unset($_SESSION['message']);
+                }
+            ?>
+
         </div>
 
         <div class="separator">
